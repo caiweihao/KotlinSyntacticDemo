@@ -1,0 +1,11 @@
+# Intellij
+*.iml
+.idea/
+.idea/workspace.xml
+.idea/libraries
+# Generated files
+bin/
+gen/
+out/
+### macOS ###
+*.DS_Store
