@@ -44,6 +44,7 @@ fun main(args: Array<String>) {
     println(p2 * 2.5f)
     println(-p2)
     println('a' * 30)
+    println(p1.plus(p2))
 
     println(0x0F and 0xF0)
     println(0x0F or 0xF0)

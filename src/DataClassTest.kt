@@ -1,7 +1,4 @@
-data class Client(val name: String, val postalCode: Int) {
-    override fun toString(): String = "Client(name=$name, postalCode=$postalCode)"
-}
-
+data class Client(val name: String, val postalCode: Int)
 class CountingSet<T>(
         val innerSet: MutableCollection<T> = HashSet<T>()
 ) : MutableCollection<T> by innerSet {
@@ -21,8 +18,8 @@ class CountingSet<T>(
 fun main(args: Array<String>) {
     val client1 = Client("Alice", 23451)
     println(client1.copy(postalCode = 124))
-    val cset = CountingSet(mutableSetOf(4, 5, 6))
-    cset.addAll(listOf(1, 1, 2))
-    println("${cset.objectsAdded} objects were added, ${cset.size} remain")
+    val counterSet = CountingSet(mutableSetOf(4, 5, 6))
+    counterSet.addAll(listOf(1, 1, 2))
+    println("${counterSet.objectsAdded} objects were added, ${counterSet.size} remain")
 
 }
