@@ -35,6 +35,10 @@ class User private constructor(val nickname: String) {
     }
 }
 
+object ThisIsASingleton {
+    val companyName: String = "JetBrains"
+}
+
 fun main(args: Array<String>) {
     println(CaseInsensitiveFileComparator.compare(
             File("/User"), File("/user")))
@@ -48,5 +52,6 @@ fun main(args: Array<String>) {
     val facebookUser = User.newFacebookUser(4)
     println(subscribingUser.nickname)
     println(facebookUser.nickname)
+    println(ThisIsASingleton.companyName)
 
 }
