@@ -34,6 +34,21 @@ fun User.saveUserLocalFunction() {
     validate(id, "id")
 }
 
+
+fun outerFunction(param:Int){
+    val outerVar = 11
+    fun localFunction(){
+        println(param)
+        println(outer)
+        println(outerVar)
+    }
+    localFunction()
+}
+
+
+var outer = 1000
+
 fun main(args: Array<String>) {
+    outerFunction(1)
     User(1, "whcai", "beijing").saveUserLocalFunction()
 }
