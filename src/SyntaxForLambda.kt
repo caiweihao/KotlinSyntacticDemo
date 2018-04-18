@@ -13,7 +13,8 @@ fun main(args: Array<String>) {
         println("computing the sum of $x and $y")
         x + y
     }
-    print(sum(2, 3))
+    val sumValue = sum(3, 4)
+    println(sumValue)
 
     run {
         println(42)
@@ -27,8 +28,8 @@ fun main(args: Array<String>) {
     printMessagesWithPrefix(errors, "Error:")
 
     run { salute() }
-
-    run(::salute)
+    val salute = ::salute
+    run(salute)
 
     val cratePerson = ::Person
     println(cratePerson("whcai", 30))

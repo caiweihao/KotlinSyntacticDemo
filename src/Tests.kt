@@ -25,7 +25,6 @@ fun main(args: Array<String>) {
     for ((letter, binary) in binaryReps) {
         println("$letter = $binary")
     }
-    val letter = 15
     println(isLetter('q'))
     println(isNotDigit('x'))
     println(recognize('8'))

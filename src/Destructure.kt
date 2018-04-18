@@ -26,9 +26,9 @@ fun main(args: Array<String>) {
     val map = mapOf("Oracle" to "Java", "JetBrains" to "Kotlin")
     printEntries(map)
     val p = Point(10, 20)
-    val (x, y) = p
-    println(x)
-    println(y)
+    val (localX, localY) = p
+    println(localX)
+    println(localY)
 
     val (name, ext) = splitFilenameDestruct("example.kt")
     println(name)

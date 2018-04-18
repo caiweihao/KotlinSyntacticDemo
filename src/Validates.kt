@@ -19,14 +19,14 @@ fun User.saveUserLocalFunction() {
                  value: String,
                  fieldName: String) {
         if(value.isEmpty()) {
-            throw IllegalArgumentException("Can't save user ${id}: empty $fieldName")
+            throw IllegalArgumentException("Can't save user $id: empty $fieldName")
         }
     }
     fun User.validate(
             value: Int,
             fieldName: String) {
         if(value < 0) {
-            throw IllegalArgumentException("Can't save user ${id}: less than zero  $fieldName")
+            throw IllegalArgumentException("Can't save user $id: less than zero  $fieldName")
         }
     }
     validate(address, "address" )

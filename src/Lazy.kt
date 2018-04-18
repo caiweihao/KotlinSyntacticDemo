@@ -18,11 +18,11 @@ class Person(val name: String) {
         }
 }
 
-fun loadLazyEmails(person: LazyPersion): List<Email> {
+fun loadLazyEmails(person: LazyPerson): List<Email> {
     println("Load lazy emails for ${person.name}")
     return listOf(/*...*/)
 }
-class LazyPersion(val name: String) {
+class LazyPerson(val name: String) {
     val emails by lazy { loadLazyEmails(this) }
 }
 
@@ -39,7 +39,7 @@ class Persons {
 }
 
 fun main(args: Array<String>) {
-    val pl = LazyPersion("Alice")
+    val pl = LazyPerson("Alice")
     println(pl.emails)
     println(pl.emails)
 
